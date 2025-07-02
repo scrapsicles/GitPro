@@ -118,6 +118,4 @@ The application can be deployed on any Node.js hosting platform. Ensure all envi
 
 ## License
 
-MIT License - see LICENSE file for details
-
-make the github oath optional. let the user enter their username and job description and leverage github's public api for the job. use the real CLAUDE API for the generate-roadmap route
+MIT License
