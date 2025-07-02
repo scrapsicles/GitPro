@@ -7,7 +7,7 @@ A comprehensive Next.js SaaS platform that generates personalized career roadmap
 - 🔐 **GitHub OAuth Integration** - Secure login with private repository access
 - 📊 **GitHub Profile Analysis** - Comprehensive analysis of repositories, languages, and activity
 - 🎯 **Job Description Matching** - Compare current skills with job requirements
-- 🤖 **AI-Powered Roadmaps** - Generate personalized learning paths using Claude API
+- 🤖 **AI-Powered Roadmaps** - Generate personalized learning paths using Gemini API
 - 📈 **Visual Analytics** - Interactive charts showing skill distributions and progress
 - 🚀 **Project Recommendations** - Custom project ideas with difficulty levels
 - 📚 **Resource Curation** - Free and paid learning resources tailored to goals
@@ -16,18 +16,21 @@ A comprehensive Next.js SaaS platform that generates personalized career roadmap
 ## Tech Stack
 
 - **Frontend**: Next.js 14, React 18, TypeScript
-- **Styling**: Tailwind CSS, Framer Motion
+- **Backend**: Next.js API routes
+- **Styling**: Tailwind CSS, Framer Motion, Modern UI, UI Aceternity
 - **Authentication**: NextAuth.js with GitHub OAuth
+- **State Management**: React Context API
+- **GitHub APIs**: Simple GitHub API wrapper for data fetching like GraphQL, RESTAPIs
 - **Charts**: Recharts
 - **Icons**: Lucide React
-- **API Integration**: Claude API for AI-powered analysis
+- **API Integration**: Gemini-2.0-flash API for AI-powered analysis
 
 ## Setup Instructions
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd github-career-roadmap
+git clone https://github.com/vastavikadi/GitPro
+cd gitpro
 ```
 
 ### 2. Install Dependencies
@@ -43,20 +46,19 @@ NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=your-nextauth-secret-here
 GITHUB_CLIENT_ID=your-github-client-id
 GITHUB_CLIENT_SECRET=your-github-client-secret
-CLAUDE_API_KEY=your-claude-api-key
+GOOGLE_API_KEY=your-google-api-key
 ```
 
 ### 4. GitHub OAuth Setup
 1. Go to GitHub Settings > Developer Settings > OAuth Apps
 2. Create a new OAuth App with:
-   - Application name: GitHub Career Roadmap
+   - Application name: GitPro
    - Homepage URL: http://localhost:3000
    - Authorization callback URL: http://localhost:3000/api/auth/callback/github
 3. Copy the Client ID and Client Secret to your `.env.local`
 
-### 5. Claude API Setup
-1. Sign up for Claude API access at Anthropic
-2. Get your API key and add it to `.env.local`
+### 5. AI API Setup
+1. Get your API key and add it to `.env.local`
 
 ### 6. Run the Development Server
 ```bash
@@ -71,7 +73,6 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
 2. **Profile Analysis**: Your GitHub profile and repositories are automatically analyzed
 3. **Job Input**: Paste a job description you're interested in
 4. **Generate Roadmap**: Click "Generate Roadmap" to get AI-powered recommendations
-5. **Review Results**: Explore your personalized learning path, projects, and resources
 
 ## API Endpoints
 
@@ -79,6 +80,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
 - `GET /api/github/profile` - Fetch GitHub user profile
 - `GET /api/github/repositories` - Fetch user repositories
 - `POST /api/generate-roadmap` - Generate AI-powered career roadmap
+## and many more
 
 ## Key Components
 
@@ -96,9 +98,6 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
 3. Add environment variables in Vercel dashboard
 4. Update `NEXTAUTH_URL` to your production domain
 
-### Other Platforms
-The application can be deployed on any Node.js hosting platform. Ensure all environment variables are properly configured.
-
 ## Future Enhancements
 
 - 📱 Mobile app version
@@ -111,11 +110,15 @@ The application can be deployed on any Node.js hosting platform. Ensure all envi
 
 ## Contributing
 
-1. Fork the repository
+1. Star and Fork the repository
 2. Create a feature branch
 3. Make your changes
 4. Submit a pull request
 
 ## License
-
 MIT License
+
+## BUY ME A COFFEE
+If you appreciate my work and want to support me, feel free to buy me a coffee!
+
+[Buy Me a Coffee](https://coff.ee/vastavikadi)
