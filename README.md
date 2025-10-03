@@ -84,6 +84,25 @@ After installation, you can start using GitPro by following these steps:
 
 For detailed instructions, refer to the [documentation](https://github.com/scrapsicles/GitPro/wiki).
 
+## Build and Run the Container
+
+```bash
+docker-compose up --build
+```
+
+Once the container starts, the application will be available at:
+
+[http://localhost:3000](http://localhost:3000)
+
+---
+
+### Stop the Container
+
+Press `CTRL + C` or run:
+
+```bash
+docker-compose down
+```
 ## Contributing
 
 We welcome contributions to GitPro! If you would like to contribute, please follow these steps:
