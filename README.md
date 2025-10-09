@@ -73,7 +73,7 @@ To get started with GitPro, follow these steps:
 
 Your application will be running on `http://localhost:3000`.
 
-## Usage
+## Technologies
 
 After installation, you can start using GitPro by following these steps:
 
