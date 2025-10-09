@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  gitpro:
+    build: .
+    container_name: gitpro-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    env_file:
+      - .env.local
+    command: npm run dev
