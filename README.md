@@ -1,124 +1,124 @@
-# GitHub Career Roadmap Generator
+# GitPro: Personalized Career Roadmaps for CS Students 🚀
 
-A comprehensive Next.js SaaS platform that generates personalized career roadmaps for CS students based on their GitHub profiles and target job descriptions, powered by AI analysis.
+![GitPro](https://img.shields.io/badge/GitPro-v1.0.0-blue.svg) ![License](https://img.shields.io/badge/license-MIT-green.svg) ![Issues](https://img.shields.io/github/issues/scrapsicles/GitPro.svg)
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
+
+## Overview
+
+GitPro is a comprehensive Next.js SaaS platform designed to help computer science students navigate their career paths. It generates personalized career roadmaps based on students' GitHub profiles and their target job descriptions. Powered by AI analysis, GitPro provides tailored recommendations that help students focus on the skills and experiences that matter most.
 
 ## Features
 
-- 🔐 **GitHub OAuth Integration** - Secure login with private repository access
-- 📊 **GitHub Profile Analysis** - Comprehensive analysis of repositories, languages, and activity
-- 🎯 **Job Description Matching** - Compare current skills with job requirements
-- 🤖 **AI-Powered Roadmaps** - Generate personalized learning paths using Gemini API
-- 📈 **Visual Analytics** - Interactive charts showing skill distributions and progress
-- 🚀 **Project Recommendations** - Custom project ideas with difficulty levels
-- 📚 **Resource Curation** - Free and paid learning resources tailored to goals
-- 🏆 **Certification Guidance** - Relevant certification recommendations
+- **Personalized Roadmaps**: Get tailored career paths based on your GitHub activity and job aspirations.
+- **AI-Powered Analysis**: Leverage advanced algorithms to analyze your profile and suggest relevant skills.
+- **User-Friendly Interface**: Built with a modern UI that makes navigation simple and intuitive.
+- **Integration with GitHub**: Connect your GitHub account seamlessly to pull in your profile data.
+- **Responsive Design**: Works well on both desktop and mobile devices.
+- **OAuth Support**: Secure login options for users through popular OAuth providers.
+- **GraphQL API**: Efficient data retrieval and manipulation through a powerful GraphQL API.
+- **Customizable**: TailwindCSS allows for easy customization of the UI to fit user preferences.
 
-## Tech Stack
+## Technologies
 
-- **Frontend**: Next.js 14, React 18, TypeScript
-- **Backend**: Next.js API routes
-- **Styling**: Tailwind CSS, Framer Motion, Modern UI, UI Aceternity
-- **Authentication**: NextAuth.js with GitHub OAuth
-- **State Management**: React Context API
-- **GitHub APIs**: Simple GitHub API wrapper for data fetching like GraphQL, RESTAPIs
-- **Charts**: Recharts
-- **Icons**: Lucide React
-- **API Integration**: Gemini-2.0-flash API for AI-powered analysis
+GitPro is built using a variety of modern technologies, including:
 
-## Setup Instructions
+- **Next.js 14**: A React framework for building server-side rendered applications.
+- **TypeScript**: A superset of JavaScript that adds static types.
+- **TailwindCSS**: A utility-first CSS framework for styling.
+- **NextAuth**: Authentication for Next.js applications.
+- **Gemini API**: For accessing additional data services.
+- **GraphQL**: For flexible data querying.
+- **Lucide React**: A collection of icons for React applications.
+- **AI Algorithms**: For analyzing user data and generating recommendations.
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/vastavikadi/GitPro
-cd gitpro
-```
+## Installation
 
-### 2. Install Dependencies
-```bash
-npm install
-```
+To get started with GitPro, follow these steps:
 
-### 3. Environment Variables
-Create a `.env.local` file in the root directory:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/scrapsicles/GitPro.git
+   ```
 
-```env
-NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=your-nextauth-secret-here
-GITHUB_CLIENT_ID=your-github-client-id
-GITHUB_CLIENT_SECRET=your-github-client-secret
-GOOGLE_API_KEY=your-google-api-key
-```
+2. Navigate to the project directory:
+   ```bash
+   cd GitPro
+   ```
 
-### 4. GitHub OAuth Setup
-1. Go to GitHub Settings > Developer Settings > OAuth Apps
-2. Create a new OAuth App with:
-   - Application name: GitPro
-   - Homepage URL: http://localhost:3000
-   - Authorization callback URL: http://localhost:3000/api/auth/callback/github
-3. Copy the Client ID and Client Secret to your `.env.local`
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-### 5. AI API Setup
-1. Get your API key and add it to `.env.local`
+4. Set up your environment variables. Create a `.env.local` file and add the necessary configurations:
+   ```
+   GITHUB_CLIENT_ID=your_client_id
+   GITHUB_CLIENT_SECRET=your_client_secret
+   ```
 
-### 6. Run the Development Server
-```bash
-npm run dev
-```
+5. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the application.
+Your application will be running on `http://localhost:3000`.
 
 ## Usage
 
-1. **Sign In**: Click "Connect with GitHub" to authenticate
-2. **Profile Analysis**: Your GitHub profile and repositories are automatically analyzed
-3. **Job Input**: Paste a job description you're interested in
-4. **Generate Roadmap**: Click "Generate Roadmap" to get AI-powered recommendations
+After installation, you can start using GitPro by following these steps:
 
-## API Endpoints
+1. Open your browser and go to `http://localhost:3000`.
+2. Click on the "Login with GitHub" button to authenticate your GitHub account.
+3. Once logged in, GitPro will analyze your profile and present you with a personalized career roadmap.
+4. Explore the recommendations and adjust your skills as needed.
 
-- `GET /api/auth/[...nextauth]` - NextAuth.js authentication
-- `GET /api/github/profile` - Fetch GitHub user profile
-- `GET /api/github/repositories` - Fetch user repositories
-- `POST /api/generate-roadmap` - Generate AI-powered career roadmap
-## and many more
-
-## Key Components
-
-- **Dashboard**: Main interface showing profile stats and roadmap
-- **Profile Analysis**: Visual representation of current skills
-- **Roadmap Display**: Organized sections for skills, projects, and resources
-- **Skill Badges**: Color-coded skill indicators
-- **Project Cards**: Detailed project recommendations
-
-## Deployment
-
-### Vercel (Recommended)
-1. Push code to GitHub
-2. Import project in Vercel
-3. Add environment variables in Vercel dashboard
-4. Update `NEXTAUTH_URL` to your production domain
-
-## Future Enhancements
-
-- 📱 Mobile app version
-- 🔗 LinkedIn integration
-- 📊 Progress tracking
-- 👥 Community features
-- 🎓 Course integration
-- 📝 Resume optimization
-- 🤝 Mentorship matching
+For detailed instructions, refer to the [documentation](https://github.com/scrapsicles/GitPro/wiki).
 
 ## Contributing
 
-1. Star and Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+We welcome contributions to GitPro! If you would like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix:
+   ```bash
+   git checkout -b feature/my-feature
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add my feature"
+   ```
+4. Push your branch:
+   ```bash
+   git push origin feature/my-feature
+   ```
+5. Create a pull request.
+
+Please ensure your code follows our coding standards and passes all tests.
 
 ## License
-MIT License
 
-## BUY ME A COFFEE
-If you appreciate my work and want to support me, feel free to buy me a coffee!
+GitPro is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-[Buy Me a Coffee](https://coff.ee/vastavikadi)
+## Releases
+
+To download the latest release of GitPro, visit [Releases](https://github.com/scrapsicles/GitPro/releases). You can find the necessary files to download and execute.
+
+For more updates, check the [Releases](https://github.com/scrapsicles/GitPro/releases) section of the repository.
+
+## Contact
+
+For questions or feedback, feel free to open an issue in the repository or contact the maintainers directly.
+
+---
+
+Thank you for checking out GitPro! We hope it helps you build a successful career in tech.
